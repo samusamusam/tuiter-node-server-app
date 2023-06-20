@@ -29,7 +29,7 @@ const AuthController = (app) => {
   };
 
   const profile = async (req, res) => {
-    const currentUser = await req.session["currentUser"];
+    const currentUser = req.session["currentUser"];
     if (!currentUser) {
       res.sendStatus(404);
       return;
@@ -46,7 +46,7 @@ const AuthController = (app) => {
 
   app.post("/api/users/register", register);
   app.post("/api/users/login", login);
-  app.get("/api/users/profile", profile);
+  app.post("/api/users/profile", profile);
   app.post("/api/users/logout", logout);
   app.put("/api/users/", update);
 };
