@@ -21,7 +21,7 @@ app.use(
 app.use(
   cors({
     credentials: true,
-    // origin: "https://main--courageous-chaja-f84435.netlify.app",
+    // origin: "https://a6--courageous-chaja-f84435.netlify.app",
     origin: "http://localhost:3000",
   })
 );
